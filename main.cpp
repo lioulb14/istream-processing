@@ -14,8 +14,8 @@ using std::getline;
  * --> getline:    http://cplusplus.com/reference/string/string/getline/
  * --> operator>>: http://cplusplus.com/reference/string/string/operator%3E%3E/
  *
- * When does the getline function stop reading from the input stream?
- * When does the operator>> stop reading from the input stream?
+ * 1. When does the getline function stop reading from the input stream?
+ * 2. When does the operator>> stop reading from the input stream?
  */
 
 int main() {
@@ -25,14 +25,14 @@ int main() {
      * not-here.txt
      * --> The program should respond:
      *     Unable to open not-here.txt
-     * --> Any idea why the output is shown in a different color?
+     * --> 3. Any idea why the output is shown in a different color?
      *
      * data.txt
-     * Was it able to open it? Any idea why?
+     * 4. Was it able to open it? Any idea why?
      *
      * ../data.txt
      * This time the program must've been able to open the file
-     * Why do you think that is? A hint: where is the program running from?
+     * 5. Why do you think that is? A hint: where is the program running from?
      */
 
     string filename;
@@ -51,7 +51,8 @@ int main() {
      * Notice in this part of the program that we are reading from the file
      * first by using the stream extraction operator >>
      * and then using the function getline
-     * Notice the output. Why do you think the output looks like that?
+     * Notice the output. 
+     * 6. Why do you think the output looks like that?
      */
     input >> string1;
     getline(input, string2);
@@ -70,7 +71,7 @@ int main() {
      * Now the program is reading from the file but this time
      * first by using getline and then by using the stream operator >>
      * Is it different from the output you saw from the previous code?
-     * Why is that?
+     * 7. Why is that?
      */
     getline(input, string1);
     input >> string2;
