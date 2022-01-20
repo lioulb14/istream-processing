@@ -15,7 +15,10 @@ using std::getline;
  * --> operator>>: http://cplusplus.com/reference/string/string/operator%3E%3E/
  *
  * 1. When does the getline function stop reading from the input stream?
+ * - stops if the end of file is reached in is or if some other error occurs during the input operation.
+
  * 2. When does the operator>> stop reading from the input stream?
+ * -
  */
 
 int main() {
@@ -29,10 +32,12 @@ int main() {
      *
      * data.txt
      * 4. Was it able to open it? Any idea why?
+     * -It wasn't able to open because file failed because its not in the right directory
      *
      * ../data.txt
      * This time the program must've been able to open the file
      * 5. Why do you think that is? A hint: where is the program running from?
+     * -the "../" looks for it in the parent directory
      */
 
     string filename;
@@ -51,8 +56,10 @@ int main() {
      * Notice in this part of the program that we are reading from the file
      * first by using the stream extraction operator >>
      * and then using the function getline
-     * Notice the output. 
+     * Notice the output.
      * 6. Why do you think the output looks like that?
+     * -because in gets string2 as getline and not input>>
+     *
      */
     input >> string1;
     getline(input, string2);
@@ -72,6 +79,7 @@ int main() {
      * first by using getline and then by using the stream operator >>
      * Is it different from the output you saw from the previous code?
      * 7. Why is that?
+     * -While the first line only has "An" thats the full line but input>> only extracts Amazing  
      */
     getline(input, string1);
     input >> string2;
